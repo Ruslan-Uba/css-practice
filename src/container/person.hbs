@@ -1,0 +1,149 @@
+{{#with person}}
+  <div>
+    <main>
+    <section>
+      <div>
+        <h1><u>{{name}}</u></h1>
+      
+        <i>Age- {{age}}</i>
+      <br>
+        <i>Gender- {{gender}}</i>
+      </div>
+      <br>
+      {{#with address}}
+        <div>
+          <address>
+            <i>Street: {{street}}</i>
+            <br>
+            <i>City: {{city}}</i>
+            <br>
+            <i>State: {{state}}</i>
+            <br>
+            <i>Zip: {{zip}}</i>
+            <br>
+            <strong>Country: {{country}}</strong>
+          </address>
+        </div>
+      {{/with}}
+    </section>    
+    <hr />
+    <section>      
+      {{#each education}}
+        {{> title data="Education" big=true}}
+        <div>
+          <em>Degree: {{degree}}</em>
+          <br>
+          <em>Major: {{major}}</em>
+          <br>
+          <em>University: {{university}}</em>
+          <br>
+          <em>GraduationYear: {{graduationYear}}</em>          
+        </div>
+      {{/each}}
+    </section>    
+    <hr>
+    <section>
+      {{#each workExperience}} 
+        {{> title data="WorkExperience" big=true}}
+        <div>
+          <em>Company: {{company}}</em>
+          <br>
+          <em>Title: {{title}}</em>
+          <br>
+          <time><em>StartDate: 2012-06-01</em></time>
+          <br>
+          <time><em>EndDate: 2016-12-31</em></time>          
+          <div>                     
+            <h4>Responsibilities:</h4>            
+            <pre>
+                Developed new features for Google Maps;
+                Worked on improving search algorithms.
+            </pre>                                  
+            <em>Year_founded: {{year_founded}}</em>
+            <br>
+            <em>Industry: {{industry}}</em>
+          </div>
+        </div>    
+        <br>        
+        <section>
+          {{#each employees}} 
+            {{> title data="Employees:"}}
+            <div>
+              <strong>{{name}}</strong>
+              <br>
+              <em>Position: {{position}}</em>
+              <br>
+              <em>Department: {{department}}</em>              
+            </div>
+            {{#each projects}}
+              <div>
+                <pre><u>{{name}}</u></pre>                
+                <em>Description: {{description}}</em>
+                <br>
+                <em>Status: {{status}}</em>                               
+              </div>
+              <br>
+              {{#each teams}}
+                <div>
+                  <strong>{{team_name}}</strong>
+                  {{#with team_leader}}
+                  <ul>                  
+                    <li>                      
+                      {{> title data="Team leader"}}                       
+                    </li> 
+                  </ul>                    
+                    <strong>{{name}}</strong>  
+                    <br>  
+                    <em>-{{title}}</em> 
+                    <br>                      
+                    <a href="john.smith@example.com">- Email</a>  
+                  {{/with}}
+                  <br>
+                  {{#each team_members}}
+                  <ul>                  
+                    <li>                      
+                      {{> title data="Team members"}}                       
+                    </li> 
+                  </ul>                    
+                    <strong>{{name}}</strong>  
+                    <br>  
+                    <em>-{{title}}</em> 
+                    <br>                      
+                    <a href="alice.johnson@example.com">- Email</a>
+                    <br>
+                    <em>-Skills: {{skills}}</em>
+                    <br>
+                    {{#each projects}}
+                      <div>
+                        <pre><u>{{name}}</u></pre>                        
+                        <p>Description: {{description}}</p>
+                      </div>
+                      {{#with technologies}}
+                        <em>Technologies:</em>
+                        <ol>
+                          <small><li>Java</li></small>                         
+                          <small><li>Spring Framework</li></small>                         
+                        </ol>
+                      {{/with}}                      
+                      {{#each team_members}}
+                        <ul>                  
+                          <li>                      
+                            {{> title data="Team members"}}                      
+                          </li> 
+                        </ul>                                         
+                          <strong>{{name}}</strong>              
+                          <br>  
+                          <em>-{{title}}</em>                         
+                      {{/each}}
+                    {{/each}}
+                  {{/each}}
+                </div>                
+              {{/each}}
+            {{/each}}
+          {{/each}}
+        </section>
+      {{/each}}
+    </section>
+  </main>
+  </div>
+{{/with}}
