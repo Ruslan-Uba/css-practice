@@ -1,0 +1,29 @@
+<div>
+  <main>
+    {{#with web}}
+      <div>
+        <h1>Languages:</h1>
+        {{#each languages}}
+
+          <ul>
+            <ol>
+              <ul>
+                <li>{{name}}</li>
+              </ul>
+            </ol>
+            <li>Version: {{version}}</li>
+            <li>Description:{{description}}</li>
+          </ul>
+          {{#each elements}}
+            <ul>
+              <li>
+                <em>{{name}}</em>
+              </li>
+            </ul>
+            <p>{{description}}</p>
+          {{/each}}
+        {{/each}}
+      </div>
+    {{/with}}
+  </main>
+</div>
