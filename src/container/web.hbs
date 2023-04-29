@@ -1,29 +1,86 @@
-<div>
-  <main>
-    {{#with web}}
-      <div>
-        <h1>Languages:</h1>
-        {{#each languages}}
-
+{{#with web}}
+  <div>
+    <h1>Languages web:</h1>
+    {{#each languages}}
+      <ul>
+        <ol>
           <ul>
-            <ol>
-              <ul>
-                <li>{{name}}</li>
-              </ul>
-            </ol>
-            <li>Version: {{version}}</li>
-            <li>Description:{{description}}</li>
+            <li><strong>{{name}}</strong></li>
           </ul>
-          {{#each elements}}
+        </ol>
+      </ul>
+      <em><u>Version:</u> {{version}}</em>
+      <p>{{description}}</p>
+
+      {{#each elements}}
+        <b>Elements:</b>
+        <ul>
+          <ol>
             <ul>
               <li>
                 <em>{{name}}</em>
               </li>
             </ul>
-            <p>{{description}}</p>
-          {{/each}}
+          </ol>
+        </ul>
+        <p>{{description}}</p>
+        {{#each attributes}}
+          <u>Attributes:</u>
+          <ul>
+            <li>
+              <em>{{name}}</em>
+            </li>
+          </ul>
+          <p>{{description}}</p>
         {{/each}}
-      </div>
-    {{/with}}
-  </main>
-</div>
+      {{/each}}
+      {{#each properties}}
+        <b>Properties:</b>
+        <ul>
+          <ol>
+            <ul>
+              <li>
+                <em>{{name}}</em>
+              </li>
+            </ul>
+          </ol>
+        </ul>
+        <p>{{description}}</p>
+        {{#each values}}
+          <u>Values:</u>
+          <ul>
+            <li>
+              <em>{{value}}</em>
+            </li>
+          </ul>
+          <p>{{description}}</p>
+        {{/each}}
+      {{/each}}
+      {{#each functions}}
+        <b>Functions:</b>
+        <ul>
+          <ol>
+            <ul>
+              <li>
+                <em>{{name}}</em>
+              </li>
+            </ul>
+          </ol>
+        </ul>
+        <p>{{description}}</p>
+        {{#each parameters}}
+          <u>Parameters:</u>
+          <ol>
+            <li>
+              <em>{{name}}</em>
+            </li>
+            <li>
+              <em>{{type}}</em>
+            </li>
+          </ol>
+          <p>{{description}}</p>
+        {{/each}}
+      {{/each}}
+    {{/each}}
+  </div>
+{{/with}}

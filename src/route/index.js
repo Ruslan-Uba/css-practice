@@ -147,6 +147,7 @@ router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
+
     page: {
       title: 'Resume-Education',
     },
@@ -535,7 +536,6 @@ router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'basic',
-
     web: {
       languages: [
         {
@@ -660,6 +660,7 @@ router.get('/web', function (req, res) {
   })
 })
 
+// ================================================================
 // ===============================================================
 
 // Підключаємо роутер до бек-енду
