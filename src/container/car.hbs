@@ -1,0 +1,306 @@
+<div>
+  <h2>Cars</h2>
+  <hr />
+  <div
+    class='accordion accordion-flush'
+    id='accordionFlushExample'
+  >
+    <div class='accordion-item'>
+      <h2 class='accordion-header'>
+        <button
+          class='accordion-button collapsed'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#flush-collapseOne'
+          aria-expanded='false'
+          aria-controls='flush-collapseOne'
+        >
+          Make
+        </button>
+      </h2>
+      <div
+        id='flush-collapseOne'
+        class='accordion-collapse collapse'
+        data-bs-parent='#accordionFlushExample'
+      >
+        <div>
+          <a
+            class='accordion-body'
+            href='#'
+          >Toyota</a></div>
+        <div>
+          <a class='accordion-body' href='#'>Honda</a></div>
+        <div>
+          <a
+            class='accordion-body'
+            href='#'
+          >Nissan</a></div>
+        <div>
+          <a
+            class='accordion-body'
+            href='#'
+          >Subaru</a></div>
+        <div>
+          <a
+            class='accordion-body'
+            href='#'
+          >Mitsubishi</a></div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class='dropdown'>
+    <button
+      class='btn btn-secondary btn-lg dropdown-toggle'
+      type='button'
+      data-bs-toggle='dropdown'
+      aria-expanded='false'
+      size=''
+    >
+      Model
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='dropdown-item' href='#'>Corola</a></li>
+      <li><a class='dropdown-item' href='#'>Camry</a></li>
+      <li><a class='dropdown-item' href='#'>C-HR</a></li>
+    </ul>
+  </div>
+  <br />
+  <div class='dropdown'>
+    <button
+      class='btn btn-secondary btn-lg dropdown-toggle'
+      type='button'
+      data-bs-toggle='dropdown'
+      aria-expanded='false'
+    >
+      Year
+    </button>
+    <ul class='dropdown-menu'>
+      <li><a class='dropdown-item' href='#'>2020</a></li>
+      <li><a class='dropdown-item' href='#'>2021</a></li>
+      <li><a class='dropdown-item' href='#'>2022</a></li>
+      <li><a class='dropdown-item' href='#'>2023</a></li>
+    </ul>
+  </div>
+  <br />
+  {{#with features}}
+    {{#with interior}}
+      <i><u>Seats:</u></i>
+      <br />
+      {{#with seats}}
+        <em>material: {{material}}</em>
+        <br />
+        <em>color: {{color}}</em>
+        <br />
+        <em>heated: {{heated}}</em>
+        <br />
+        <em>ventilated: {{ventilated}}</em>
+      {{/with}}
+      <br />
+
+      {{#with dashboard}}
+        <ul>
+          <ul>
+            <ol>
+              <ul>
+                <li>
+                  <i><u>Dashboard:</u></i>
+                </li>
+              </ul>
+            </ol>
+            <li>{{material}}, {{color}};</li>
+          </ul>
+        </ul>
+        {{#with display}}
+          <i><u>Display:</u></i>
+          <ul>
+            <li></li>
+            <span>type: {{type}}</span>
+            <li></li>
+            <span>size: {{size}}</span>
+            <li></li>
+            <span>resolution: {{resolution}}</span>
+            <li></li>
+            <span>touchscreen: {{touchscreen}}</span>
+          </ul>
+        {{/with}}
+      {{/with}}
+      <i><u>Audio:</u></i>
+      <br />
+      {{#with audio}}
+        <pre> system: JBL</pre>
+        <pre> speakers: 8</pre>
+        <pre> subwoofer: true</pre>
+        <pre> bluetooth: true</pre>
+        <pre> USB: true</pre>
+      {{/with}}
+    {{/with}}
+    {{#with exterior}}
+      <br />
+      {{#with wheels}}
+        <div>
+          <ul>
+            <ol>
+              <ul>
+                <li>
+                  <i><u>Wheels:</u></i>
+                </li>
+              </ul>
+            </ol>
+          </ul>
+          <pre> size: {{size}};</pre>
+          <pre> type: {{type}};</pre>
+          <pre> color: {{color}}.</pre>
+        </div>
+      {{/with}}
+      <br />
+      <div>
+        {{#with headlights}}
+          <ul>
+            <ol>
+              <ul>
+                <li>
+                  <i><u>Headlights:</u></i>
+                </li>
+              </ul>
+            </ol>
+          </ul>
+          <pre> type: {{type}};</pre>
+          <pre> brightness: {{brightness}};</pre>
+          <pre> automatic: {{automatic}}.</pre>
+        {{/with}}
+      </div>
+      {{#with sunroof}}
+        <ul>
+          <ol>
+            <ul>
+              <li>
+                <i><u>sunroof:</u></i>
+              </li>
+            </ul>
+          </ol>
+        </ul>
+        <pre> type: {{type}};</pre>
+        <pre> size: {{size}};</pre>
+        <pre> automatic: {{automatic}}.</pre>
+      {{/with}}
+    {{/with}}
+    {{#with safety}}
+      {{#with airbags}}
+      <div class='row'>
+        <div class='col-sm-6 mb-3 mb-sm-0'>          
+          <div class='card'>
+            <div class="card-header">Safety:</div>
+              <div class='card-body'>              
+                <h6 class='card-title'>Airbags:</h6>              
+                  <span class='card-text'>front:
+                    {{front}}</span>
+                  <br>  
+                  <span class='card-text'>knee:
+                    {{knee}}</span>
+                  <br>
+                  <span class='card-text'>rear:
+                    {{rear}}</span>
+                  <br>
+                  <span class='card-text'>side:
+                    {{side}}</span>
+                  <br>
+                  <br>
+                  <span></span>
+                {{! <a href='#' class='btn btn-primary'>Go
+                  somewhere</a> }}
+              </div>
+            </div>
+          </div>        
+        {{/with}}
+        {{#with assistance}}
+        <div class='col-sm-6'>
+          <div class='card'>
+            <div class="card-header">Safety:</div>
+              <div class='card-body'>                
+                <h6 class='card-title'>Assistance:</h6>
+                <span class='card-text'>blind_spot_monitoring:
+                 {{blind_spot_monitoring}}</span>
+                <br>
+                <span
+                  class='card-text'
+                >rear_cross_traffic_alert:
+                  {{rear_cross_traffic_alert}}</span>
+                <br>
+                <span
+                  class='card-text'
+                >lane_departure_warning:
+                  {{lane_departure_warning}}</span>
+                <br>
+                <span
+                  class='card-text'
+                >adaptive_cruise_control:
+                  {{adaptive_cruise_control}}</span>
+                <br>
+                <span class='card-text'>collision_warning:
+                  {{collision_warning}}</span>               
+              {{! <a href='#' class='btn btn-primary'>Go
+                somewhere</a> }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/with}}
+    {{/with}}
+  {{/with}}
+  <br> 
+  <div class="row">
+    <h5 class="text-center">Engine</h5> 
+    {{#with engine}}
+      <div class="col-4">
+        <ul>
+          <li>type: {{type}}</li>
+          <li>displacement: {{displacement}}</li>
+          <li>horsepower: {{horsepower}}</li>
+          <li>torque: {{torque}}</li>
+        </ul>     
+      </div>
+      <div class="col-8">
+        {{#with transmission}}
+          <pre>type: {{type}}</pre>
+          <pre>gears: {{gears}}</pre>      
+        {{/with}}
+      </div>
+    </div>
+  {{/with}}
+  {{#with fuel_economy}}    
+    <div class="card" style="width: 18rem;">
+      <div class="card-header">
+       Fuel economy
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">city: {{city}}</li>
+        <li class="list-group-item">highway: {{highway}}</li>
+        <li class="list-group-item">combined: {{combined}}</li>
+      </ul>
+    </div>
+  {{/with}}
+  <br>
+  {{#with price}}
+    <div class="card mb-5" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Toyota_Corolla_Hybrid_Sedan%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS1338%29.jpg/250px-Toyota_Corolla_Hybrid_Sedan%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS1338%29.jpg" class="img-fluid rounded-start" alt="Toyota">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Price</h5>
+            <p class="card-text">base: {{base}}</p>
+            <p class="card-text">destination: {{destination}}</p>
+            {{#with options}}
+              <p class="card-text">navigation: {{navigation}}</p>
+              <p class="card-text">moonroof: {{moonroof}}</p>
+              <p class="card-text">premium paint: {{premium_paint}}</p>              
+            {{/with}}
+              <p class="card-text"><b>total: {{total}}</b></p>
+          </div>          
+        </div>
+      </div>
+    </div>
+  {{/with}}  
+</div>
