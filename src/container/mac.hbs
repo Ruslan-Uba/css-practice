@@ -1,0 +1,121 @@
+<main>
+  <div class='text-center'>
+    <h3>{{name}}</h3>
+    <br />
+    <h5>{{description}}</h5>
+    <br />
+    <i><u>{{category}}</u></i>
+    <strong>, price: {{price}}</strong>
+  </div>
+  <br />
+  {{#with features}}
+    <div class='row'>
+      {{#with processor}}
+        <div class='col-4'>
+          <b class='text-uppercase'>processor</b>
+          <pre>brand: {{brand}}</pre>
+          <pre>model:{{model}}</pre>
+          <pre>speed: {{speed}}</pre>
+          <pre>cores:{{cores}}</pre>
+          <pre>cache: {{cache}}</pre>
+        </div>
+      {{/with}}
+      {{#with memory}}
+        <div class='col-4'>
+          <b class='text-uppercase'>memory</b>
+          <pre>type: {{type}}</pre>
+          <pre>size:{{size}}</pre>
+          <pre>speed: {{speed}}</pre>
+        </div>
+      {{/with}}
+      {{#with storage}}
+        <div class='col-4'>
+          <b class='text-uppercase'>storage</b>
+          <pre>type: {{type}}</pre>
+          <pre>size:{{size}}</pre>
+        </div>
+      {{/with}}
+    </div>
+    <div class='row'>
+      {{#with display}}
+        <div class='col-4'>
+          <b class='text-uppercase'>display</b>
+          <pre>size: {{size}}</pre>
+          <pre>resolution:{{resolution}}</pre>
+          <pre>technology:{{technology}}</pre>
+          <pre>color space:{{color_space}}</pre>
+          <pre>brightness:{{brightness}}</pre>
+          <pre>refresh rate:{{refresh_rate}}</pre>
+        </div>
+      {{/with}}
+      {{#with graphics}}
+        <div class='col-4'>
+          <b class='text-uppercase'>graphics</b>
+          <pre>brand: {{brand}}</pre>
+          <pre>model:{{model}}</pre>
+          <pre>memory:{{memory}}</pre>
+        </div>
+      {{/with}}
+    </div>
+    <br />
+    <div class='row'>
+      {{#each ports}}
+        <div class='col-4'>
+          <b class='text-uppercase'>ports</b>
+          <p>type: <small>{{type}}</small></p>
+          <p>count: <small>{{count}}</small></p>
+        </div>
+      {{/each}}
+    </div>
+    <div class='card' style='width: 18rem;'>
+      <div class='card-header'>
+        Features
+      </div>
+      <ul class='list-group list-group-flush'>
+        <li class='list-group-item'>Charging</li>
+        <li class='list-group-item'>DisplayPort</li>
+        <li class='list-group-item'>Thunderbolt (up to 40
+          Gbps)</li>
+        <li class='list-group-item'>USB 3.1 Gen 2 (up to 10
+          Gbps)</li>
+      </ul>
+    </div>
+    <br />
+    <div class='row'>
+      {{#with battery}}
+        <div class='col-4'>
+          <b class='text-uppercase'>battery:</b>
+          <p>type: {{type}}</p>
+          <p>capacity: {{capacity}}</p>
+          <p>life: {{life}}</p>
+        </div>
+        <br />
+      {{/with}}
+      <u><b class='text-uppercase'>weight</b></u>
+      <br />
+      {{#with dimensions}}
+        <div class='col-4'>
+          <b class='text-uppercase'>dimensions:</b>
+          <p>height: {{height}}</p>
+          <p>width: {{width}}</p>
+          <p>depth: {{depth}}</p>
+        </div>
+      {{/with}}
+    </div>
+    <br />
+    <div class='text-center'>
+      <u><b class='text-uppercase'>operating system</b></u>
+    </div>
+    <br />
+    <div class='row'>
+      {{#each accessories}}
+        <div class='col-4'>
+          <ul>
+            <li>{{name}}</li>
+            <li>{{price}}</li>
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  {{/with}}
+</main>
