@@ -1,0 +1,88 @@
+<main>
+  <h3 class='text-center'>{{name}}</h3>
+  <div class='row text-start'>
+    {{#each users}}
+      <div class='col-12'>
+        <b class='text-uppercase'>users</b>
+        <br />
+        <span>id: {{id}}</span>
+        <br />
+        <span>name: {{name}}</span>
+        <br />
+        <span>gender: {{gender}}</span>
+        <br />
+        <span>age: {{age}}</span>
+      </div>
+      <br />
+      {{#each friends}}
+        <div class='col-4'>
+          <b class='text-uppercase'><u>friends</u></b>
+          <br />
+          <span>id: {{id}}</span>
+          <br />
+          <span>name: {{name}}</span>
+          <br />
+          <span>gender: {{gender}}</span>
+          <br />
+          <span>age: {{age}}</span>
+        </div>
+        <br />
+        {{#each mutual_friends}}
+          <div class='col-4'>
+            <b class='text-uppercase'>mutual friends</b>
+            <br />
+            <span>id: {{id}}</span>
+            <br />
+            <span>name: {{name}}</span>
+            <br />
+            <span>gender: {{gender}}</span>
+            <br />
+            <span>age: {{age}}</span>
+          </div>
+          <br />
+          {{#each mutual_friends}}
+            <div class='col-12 text-end'>
+              <i class='text-uppercase'>mutual friends </i>
+              <br />
+              <span>id: {{id}}</span>
+              <br />
+              <span>name: {{name}}</span>
+              <br />
+              <span>gender: {{gender}}</span>
+              <br />
+              <span>age: {{age}}</span>
+            </div>
+          {{/each}}
+        {{/each}}
+        <hr />
+      {{/each}}
+      {{#each groups}}
+        <div class='col-8'>
+          <b class='text-uppercase'>groups</b>
+          <br />
+          <span>id: {{id}}</span>
+          <br />
+          <span>name: {{name}}</span>
+          <br />
+          <span>description: {{description}}</span>
+        </div>
+        <br />
+        {{#each members}}
+          <div class='col-4'>
+            <b class='text-uppercase'>members</b>
+            <br />
+            <span>id: {{id}}</span>
+            <br />
+            <span>name: {{name}}</span>
+            <br />
+            <span>gender: {{gender}}</span>
+            <br />
+            <span>age: {{age}}</span>
+          </div>
+        {{/each}}
+        <hr />
+        <hr />
+      {{/each}}
+    {{/each}}
+  </div>
+</main>
