@@ -1,0 +1,86 @@
+<main>
+  {{#with page_header}}
+    <div class='text-center'>
+      <h1>{{title}}</h1>
+      <p class='text-uppercase'>{{description}}</p>
+    </div>
+  {{/with}}
+  <section>
+    {{#with section}}
+      {{#with about_us}}
+        {{#with title_list}}
+          <div class='text-end'>
+            <div class='display-6'>
+              <h2>{{main}}</h2>
+              <p>{{sub}}</p>
+            </div>
+          </div>
+        {{/with}}
+        {{#with button}}
+          <button
+            type='button'
+            class='btn btn-outline-info m-3'
+          >{{text}}</button>
+        {{/with}}
+      {{/with}}
+      <div class='display-5 text-muted'>
+        <strong>{{title}}</strong>
+        {{#with advantage}}
+          <strong>{{title}}</strong>
+          <div class='display-4 mt-4'>
+            {{#with efficiency}}
+              <h6>{{title}}</h6>
+              <p>{{sub_title}}</p>
+              <p>{{description}}</p>
+              <button
+                class='btn btn-outline-warning'
+              >{{button}}</button>
+            {{/with}}
+          </div>
+          <div class='mt-4'>
+            {{#with innovation}}
+              <div class='display-4 text-center'>
+                <h6>{{title}}</h6>
+                <p>{{sub_title}}</p>
+                <p>{{description}}</p>
+              </div>
+              <button
+                class='btn btn-outline-warning'
+              >{{button}}</button>
+            {{/with}}
+          </div>
+          <div class='mt-4'>
+            {{#with collaboration}}
+              <div class='display-4 text-end'>
+                <h6>{{title}}</h6>
+                <p>{{sub_title}}</p>
+                <p>{{description}}</p>
+              </div>
+              <button
+                class='btn btn-outline-warning'
+              >{{button}}</button>
+            {{/with}}
+          </div>
+        {{/with}}
+      </div>
+      <div class='display-5 mt-5'>
+        {{#with agreement}}
+          <strong class='text-lowercase'>{{title}}</strong>
+          <div class='m-3'>
+            {{#with info}}
+              <h5>{{sub_title}}</h5>
+              <div class='m-3'>
+                {{#with detail}}
+                  <p>{{text}}</p>
+                  <button
+                    class='btn btn-success'
+                  >{{button}}</button>
+                {{/with}}
+              </div>
+            {{/with}}
+          </div>
+        {{/with}}
+      </div>
+    {{/with}}
+  </section>
+</main>
