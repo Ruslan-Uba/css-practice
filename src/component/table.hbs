@@ -1,0 +1,39 @@
+{{#each itemList}}
+  <tr>
+    <div class='col-4 mt-4'>
+      <tb>
+        <p>{{number}}</p>
+        <b>{{status}}</b>
+      </tb>
+    </div>
+    <div class='col-2 mt-4'>
+      {{#with amount}}
+        <tb>
+          <p>{{title}}:</p>
+          <b>{{value}}</b>
+        </tb>
+      {{/with}}
+    </div>
+    <div class='col-4'>
+      <div class='row'>
+        {{#each images}}
+          <div class='col-4'>
+            <tb>
+              <img src='{{this}}' alt='photo' class='m-2' />
+            </tb>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class='col-2'>
+      {{#with button}}
+        <tb>
+          <a
+            href='{{link}}'
+            class='btn btn-primary mt-4'
+          >{{text}}</a>
+        </tb>
+      {{/with}}
+    </div>
+  </tr>
+{{/each}}
