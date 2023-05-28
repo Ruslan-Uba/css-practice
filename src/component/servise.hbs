@@ -1,0 +1,14 @@
+<div class='card mt-5 mb-5 text-bg-success'>
+  {{#with service}}
+    <h1 class='displey-2 text-center mt-3'>{{title}}</h1>
+    <p class='text-center'>{{description}}</p>
+    <div class='text-center mb-3'>
+      {{#each buttons}}
+        <a
+          href='{{link}}'
+          class='btn btn-primary'
+        >{{text}}</a>
+      {{/each}}
+    </div>
+  {{/with}}
+</div>
