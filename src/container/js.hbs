@@ -1,11 +1,8 @@
-<div>
-  <h1
-    class='position-absolute top-0 start-50 translate-middle-x'
-  >{{name}}</h1>
-  <br />
-  <br />
-  <br />
-  <p class='font-monospace'>{{description}}</p>
+<div class='ms-3'>
+  <h1 class='text-center'>{{name}}</h1>
+  <div class='mt-3'>
+    <p class='font-monospace'>{{description}}</p>
+  </div>
   {{#with history}}
     <em>{{year}}, {{founder}}</em>
   {{/with}}
